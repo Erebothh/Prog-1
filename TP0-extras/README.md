@@ -73,7 +73,7 @@ Cargué cinco estudiantes:
 
 Si se ejecuta con una nota de corte de 6, aprueban Ana, Bruno, Carla y Elena.
 
-## Salida esperada (resumida)
+## Salida esperada
 
 ```text
 === EJERCICIO 2: PROMEDIO GENERAL ===
