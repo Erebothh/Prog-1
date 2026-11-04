@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="920" viewBox="0 0 1320 920">
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto"><path d="M0,0 L0,8 L11,4 z" fill="#333"/></marker></defs>
+<rect width="1320" height="920" fill="#fbfbfd"/>
+<text x="660" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1f2937">CityLink - Diagrama de clases</text>
+<rect x="50" y="55" width="190" height="62" rx="8" fill="#eef6ff" stroke="#334155" stroke-width="1.6"/>
+<text x="145.0" y="77" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-style="italic" fill="#475569">«interface»</text>
+<text x="145.0" y="93" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#0f172a">Rastreable</text>
+<line x1="60" y1="99" x2="230" y2="99" stroke="#cbd5e1" stroke-width="1"/>
+<text x="62" y="116" font-family="Arial, sans-serif" font-size="12" fill="#334155">+ obtenerEstadoActual(): String</text>
+<rect x="270" y="55" width="190" height="62" rx="8" fill="#eef6ff" stroke="#334155" stroke-width="1.6"/>
+<text x="365.0" y="77" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-style="italic" fill="#475569">«interface»</text>
+<text x="365.0" y="93" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#0f172a">Facturable</text>
+<line x1="280" y1="99" x2="450" y2="99" stroke="#cbd5e1" stroke-width="1"/>
+<text x="282" y="116" font-family="Arial, sans-serif" font-size="12" fill="#334155">+ calcularImporte(): double</text>
+<rect x="50" y="180" width="210" height="165" rx="8" fill="#ffffff" stroke="#334155" stroke-width="1.6"/>
+<text x="155.0" y="202" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#0f172a">Cliente</text>
+<line x1="60" y1="208" x2="250" y2="208" stroke="#cbd5e1" stroke-width="1"/>
+<text x="62" y="225" font-family="Arial, sans-serif" font-size="12" fill="#334155">- codigo: int</text>
+<text x="62" y="240" font-family="Arial, sans-serif" font-size="12" fill="#334155">- nombre: String</text>
+<text x="62" y="255" font-family="Arial, sans-serif" font-size="12" fill="#334155">- telefono: String</text>
+<text x="62" y="270" font-family="Arial, sans-serif" font-size="12" fill="#334155">- zona: String</text>
+<text x="62" y="285" font-family="Arial, sans-serif" font-size="12" fill="#334155">+ getters / setters</text>
+<text x="62" y="300" font-family="Arial, sans-serif" font-size="12" fill="#334155">+ toString(): String</text>
+<rect x="340" y="165" width="265" height="220" rx="8" fill="#fff7ed" stroke="#334155" stroke-width="1.6"/>
+<text x="472.5" y="187" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-style="italic" fill="#475569">«abstract»</text>
+<text x="472.5" y="203" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#0f172a">Pedido</text>
+<line x1="350" y1="209" x2="595" y2="209" stroke="#cbd5e1" stroke-width="1"/>
+<text x="352" y="226" font-family="Arial, sans-serif" font-size="12" fill="#334155">- codigo: int</text>
+<text x="352" y="241" font-family="Arial, sans-serif" font-size="12" fill="#334155">- cliente: Cliente</text>
+<text x="352" y="256" font-family="Arial, sans-serif" font-size="12" fill="#334155">- destino: String</text>
+<text x="352" y="271" font-family="Arial, sans-serif" font-size="12" fill="#334155">- pesoKg, distanciaKm: double</text>
+<text x="352" y="286" font-family="Arial, sans-serif" font-size="12" fill="#334155">- fechaHora: LocalDateTime</text>
+<text x="352" y="301" font-family="Arial, sans-serif" font-size="12" fill="#334155">- estado: EstadoPedido</text>
+<text x="352" y="316" font-family="Arial, sans-serif" font-size="12" fill="#334155">- vehiculoAsignado: Vehiculo</text>
+<text x="352" y="331" font-family="Arial, sans-serif" font-size="12" fill="#334155">+ calcularCosto(Vehiculo): double</text>
+<text x="352" y="346" font-family="Arial, sans-serif" font-size="12" fill="#334155">+ cambiarEstado(EstadoPedido): void</text>
+<text x="352" y="361" font-family="Arial, sans-serif" font-size="12" fill="#334155">+ calcularImporte(): double</text>
+<text x="352" y="376" font-family="Arial, sans-serif" font-size="12" fill="#334155">+ obtenerEstadoActual(): String</text>
+<text x="352" y="391" font-family="Arial, sans-serif" font-size="12" fill="#334155"># getTipo(): String</text>
+<rect x="840" y="165" width="280" height="220" rx="8" fill="#f0fdf4" stroke="#334155" stroke-width="1.6"/>
+<text x="980.0" y="187" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-style="italic" fill="#475569">«abstract»</text>
+<text x="980.0" y="203" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#0f172a">Vehiculo</text>
+<line x1="850" y1="209" x2="1110" y2="209" stroke="#cbd5e1" stroke-width="1"/>
+<text x="852" y="226" font-family="Arial, sans-serif" font-size="12" fill="#334155">- patente: String</text>
+<text x="852" y="241" font-family="Arial, sans-serif" font-size="12" fill="#334155">- capacidadKg: double</text>
+<text x="852" y="256" font-family="Arial, sans-serif" font-size="12" fill="#334155">- velocidadKmH: double</text>
+<text x="852" y="271" font-family="Arial, sans-serif" font-size="12" fill="#334155">- costoPorKm: double</text>
+<text x="852" y="286" font-family="Arial, sans-serif" font-size="12" fill="#334155">+ puedeTransportar(Pedido): boolean</text>
+<text x="852" y="301" font-family="Arial, sans-serif" font-size="12" fill="#334155">+ calcularTiempoEntrega(double): double</text>
+<text x="852" y="316" font-family="Arial, sans-serif" font-size="12" fill="#334155">+ getTipoVehiculo(): String</text>
+<rect x="245" y="480" width="165" height="110" rx="8" fill="#fff7ed" stroke="#334155" stroke-width="1.6"/>
+<text x="327.5" y="502" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#0f172a">PedidoNormal</text>
+<line x1="255" y1="508" x2="400" y2="508" stroke="#cbd5e1" stroke-width="1"/>
+<text x="257" y="525" font-family="Arial, sans-serif" font-size="12" fill="#334155">+ calcularCosto(...)</text>
+<text x="257" y="540" font-family="Arial, sans-serif" font-size="12" fill="#334155">+ getTipo(): String</text>
+<rect x="430" y="480" width="165" height="110" rx="8" fill="#fff7ed" stroke="#334155" stroke-width="1.6"/>
+<text x="512.5" y="502" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#0f172a">PedidoUrgente</text>
+<line x1="440" y1="508" x2="585" y2="508" stroke="#cbd5e1" stroke-width="1"/>
+<text x="442" y="525" font-family="Arial, sans-serif" font-size="12" fill="#334155">+ calcularCosto(...)</text>
+<text x="442" y="540" font-family="Arial, sans-serif" font-size="12" fill="#334155">+ getTipo(): String</text>
+<rect x="615" y="480" width="165" height="110" rx="8" fill="#fff7ed" stroke="#334155" stroke-width="1.6"/>
+<text x="697.5" y="502" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#0f172a">PedidoFragil</text>
+<line x1="625" y1="508" x2="770" y2="508" stroke="#cbd5e1" stroke-width="1"/>
+<text x="627" y="525" font-family="Arial, sans-serif" font-size="12" fill="#334155">+ calcularCosto(...)</text>
+<text x="627" y="540" font-family="Arial, sans-serif" font-size="12" fill="#334155">+ getTipo(): String</text>
+<rect x="800" y="480" width="150" height="110" rx="8" fill="#f0fdf4" stroke="#334155" stroke-width="1.6"/>
+<text x="875.0" y="502" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#0f172a">Bicicleta</text>
+<line x1="810" y1="508" x2="940" y2="508" stroke="#cbd5e1" stroke-width="1"/>
+<text x="812" y="525" font-family="Arial, sans-serif" font-size="12" fill="#334155">+ calcularTiempoEntrega()</text>
+<text x="812" y="540" font-family="Arial, sans-serif" font-size="12" fill="#334155">+ puedeTransportar()</text>
+<rect x="970" y="480" width="150" height="110" rx="8" fill="#f0fdf4" stroke="#334155" stroke-width="1.6"/>
+<text x="1045.0" y="502" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#0f172a">Moto</text>
+<line x1="980" y1="508" x2="1110" y2="508" stroke="#cbd5e1" stroke-width="1"/>
+<text x="982" y="525" font-family="Arial, sans-serif" font-size="12" fill="#334155">+ calcularTiempoEntrega()</text>
+<rect x="1140" y="480" width="150" height="110" rx="8" fill="#f0fdf4" stroke="#334155" stroke-width="1.6"/>
+<text x="1215.0" y="502" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#0f172a">Camioneta</text>
+<line x1="1150" y1="508" x2="1280" y2="508" stroke="#cbd5e1" stroke-width="1"/>
+<text x="1152" y="525" font-family="Arial, sans-serif" font-size="12" fill="#334155">+ calcularTiempoEntrega()</text>
+<rect x="340" y="665" width="285" height="165" rx="8" fill="#fdf4ff" stroke="#334155" stroke-width="1.6"/>
+<text x="482.5" y="687" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#0f172a">Repartidor</text>
+<line x1="350" y1="693" x2="615" y2="693" stroke="#cbd5e1" stroke-width="1"/>
+<text x="352" y="710" font-family="Arial, sans-serif" font-size="12" fill="#334155">- legajo: int</text>
+<text x="352" y="725" font-family="Arial, sans-serif" font-size="12" fill="#334155">- nombre: String</text>
+<text x="352" y="740" font-family="Arial, sans-serif" font-size="12" fill="#334155">- vehiculo: Vehiculo</text>
+<text x="352" y="755" font-family="Arial, sans-serif" font-size="12" fill="#334155">- pedidos: Pedido[]</text>
+<text x="352" y="770" font-family="Arial, sans-serif" font-size="12" fill="#334155">- cantidadPedidos: int</text>
+<text x="352" y="785" font-family="Arial, sans-serif" font-size="12" fill="#334155">+ asignarPedido(Pedido): void</text>
+<text x="352" y="800" font-family="Arial, sans-serif" font-size="12" fill="#334155">+ asignarPedido(Pedido, Vehiculo): void</text>
+<text x="352" y="815" font-family="Arial, sans-serif" font-size="12" fill="#334155">+ registrarEntrega(Pedido): void</text>
+<text x="352" y="830" font-family="Arial, sans-serif" font-size="12" fill="#334155">+ calcularImporte(): double</text>
+<text x="352" y="845" font-family="Arial, sans-serif" font-size="12" fill="#334155">+ obtenerEstadoActual(): String</text>
+<rect x="700" y="690" width="245" height="120" rx="8" fill="#f8fafc" stroke="#334155" stroke-width="1.6"/>
+<text x="822.5" y="712" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#0f172a">CityLink</text>
+<line x1="710" y1="718" x2="935" y2="718" stroke="#cbd5e1" stroke-width="1"/>
+<text x="712" y="735" font-family="Arial, sans-serif" font-size="12" fill="#334155">- clientes: Cliente[50]</text>
+<text x="712" y="750" font-family="Arial, sans-serif" font-size="12" fill="#334155">- pedidos: Pedido[100]</text>
+<text x="712" y="765" font-family="Arial, sans-serif" font-size="12" fill="#334155">- repartidores: Repartidor[10]</text>
+<text x="712" y="780" font-family="Arial, sans-serif" font-size="12" fill="#334155">- vehiculos: Vehiculo[30]</text>
+<text x="712" y="795" font-family="Arial, sans-serif" font-size="12" fill="#334155">+ operaciones del sistema</text>
+<rect x="1010" y="710" width="150" height="85" rx="8" fill="#f8fafc" stroke="#334155" stroke-width="1.6"/>
+<text x="1085.0" y="732" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#0f172a">Main</text>
+<line x1="1020" y1="738" x2="1150" y2="738" stroke="#cbd5e1" stroke-width="1"/>
+<text x="1022" y="755" font-family="Arial, sans-serif" font-size="12" fill="#334155">+ main(String[]): void</text>
+<text x="1022" y="770" font-family="Arial, sans-serif" font-size="12" fill="#334155">menú por teclado</text>
+<line x1="340" y1="255" x2="260" y2="255" stroke="#334155" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="300" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">cliente</text>
+<line x1="605" y1="255" x2="840" y2="255" stroke="#334155" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="720" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">vehiculoAsignado</text>
+<line x1="145" y1="117" x2="400" y2="165" stroke="#334155" stroke-width="1.4" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+<line x1="365" y1="117" x2="520" y2="165" stroke="#334155" stroke-width="1.4" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+<line x1="420" y1="385" x2="328" y2="480" stroke="#334155" stroke-width="1.4" marker-end="url(#arrow)"/>
+<line x1="470" y1="385" x2="512" y2="480" stroke="#334155" stroke-width="1.4" marker-end="url(#arrow)"/>
+<line x1="525" y1="385" x2="697" y2="480" stroke="#334155" stroke-width="1.4" marker-end="url(#arrow)"/>
+<line x1="920" y1="385" x2="875" y2="480" stroke="#334155" stroke-width="1.4" marker-end="url(#arrow)"/>
+<line x1="980" y1="385" x2="1045" y2="480" stroke="#334155" stroke-width="1.4" marker-end="url(#arrow)"/>
+<line x1="1040" y1="385" x2="1215" y2="480" stroke="#334155" stroke-width="1.4" marker-end="url(#arrow)"/>
+<line x1="625" y1="730" x2="700" y2="745" stroke="#334155" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="662" y="724" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">gestiona</text>
+<line x1="945" y1="750" x2="1010" y2="750" stroke="#334155" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="660" y="890" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#64748b">Pedido implementa Rastreable y Facturable. Repartidor también implementa ambas interfaces.</text>
+</svg>
