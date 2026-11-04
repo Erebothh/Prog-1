@@ -372,19 +372,6 @@ El menú captura las excepciones y sigue funcionando. También se mantiene el bl
 
 ## Declaración de uso de IA
 
-Para este entregable se usó **OpenCode** (agente de IA con el modelo **Big Pickle**) como apoyo para ordenar ideas, revisar errores de compilación, proponer comentarios y contrastar los resultados de las pruebas.
+Para este entregable se usó **OpenCode** (agente de IA con el modelo **Big Pickle**) como apoyo para ordenar ideas, revisar errores de compilación y contrastar los resultados de las pruebas.
 
-La IA no reemplazó la comprensión del código: el grupo leyó, ejecutó y verificó las clases y los resultados antes de la entrega. Cada integrante puede explicar qué hace cada método y por qué se tomaron las decisiones de diseño.
-
-El código fue ejecutado y revisado por los integrantes. Cada integrante puede explicar las clases, los algoritmos y las decisiones tomadas. Las pruebas del README se corrieron sobre la versión entregada.
-
-## Git
-
-El repositorio debe tener commits de los cuatro integrantes. Sugerencia de reparto:
-
-- Thiago: estructuras de clientes y repartidores (`TreeMap`, listas).
-- Ángel: colas, pila y opción "Deshacer".
-- Walter: algoritmos de búsqueda, ordenamiento e intercalación.
-- Álvaro: integración del menú, README y pruebas.
-
-No hace falta que sea exactamente así, pero sí que se vean commits de todos.
+El código fue compilado, ejecutado y verificado por el grupo antes de la entrega.

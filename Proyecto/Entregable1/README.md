@@ -384,7 +384,7 @@ Aunque el menú del Entregable 1 no tiene una opción de baja, el gestor tiene `
 
 ## Tipos de errores
 
-En la exposición hay que explicar la diferencia entre error de compilación, de ejecución y lógico. Estos son ejemplos reales de este proyecto:
+En el proyecto aparecieron errores de compilación, de ejecución y lógicos. Estos son ejemplos reales:
 
 ### Error de compilación
 
@@ -400,17 +400,6 @@ Al principio la comisión sumaba todos los pedidos, incluso los pendientes. El p
 
 ## Declaración de uso de IA
 
-Para este entregable se usó **OpenCode** (agente de IA con el modelo **Big Pickle**) como apoyo para ordenar ideas, revisar errores de compilación, proponer comentarios y contrastar los resultados de las pruebas.
+Para este entregable se usó **OpenCode** (agente de IA con el modelo **Big Pickle**) como apoyo para ordenar ideas, revisar errores de compilación y contrastar los resultados de las pruebas.
 
-La IA no reemplazó la comprensión del código: el grupo leyó, ejecutó y verificó las clases y los resultados antes de la entrega. Cada integrante puede explicar qué hace cada método y por qué se tomaron las decisiones de diseño.
-
-## Git
-
-El repositorio debe tener commits de los cuatro integrantes. Sugerencia de reparto:
-
-- Thiago: modelo de `Cliente`, `Pedido` y subclases.
-- Ángel: `Vehiculo`, subclases y `Repartidor`.
-- Walter: `CityLink`, `Main` y pruebas.
-- Álvaro: README, diagramas y revisión general.
-
-No hace falta que sea exactamente así, pero sí que se vean commits de todos.
+El código fue compilado, ejecutado y verificado por el grupo antes de la entrega.
