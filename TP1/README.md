@@ -124,13 +124,6 @@ Las clases concretas son:
 
 En el `main` hay un arreglo de `Vehiculo`. Se pide la cantidad de días y se recorre el arreglo llamando a `calcularAlquiler(dias)`. Tampoco hay `if` ni `switch` para decidir el cálculo.
 
-## Algunos errores que me aparecieron
-
-- Al principio me olvidé de llamar a `super(...)` en `Alumno` y Java no compilaba porque `Persona` no tenía constructor vacío.
-- En el Ejercicio 3 puse `calcularSueldo` sin `@Override`; funcionaba, pero lo agregué para que quede claro que estoy sobrescribiendo.
-- En el Ejercicio 5, si no validaba los días, se podía pedir un alquiler de 0 o negativo. Agregué un `while` para pedir de nuevo.
-- Un error lógico que tuve fue dividir por la cantidad de materias cuando la lista estaba vacía. Lo solucioné devolviendo 0 si no hay materias.
-
 ## Para ejecutar
 
 ```bash
