@@ -382,6 +382,19 @@ No es fácil de probar desde el menú porque habría que cargar 50 clientes, 100
 
 Aunque el menú del Entregable 1 no tiene una opción de baja, el gestor tiene `eliminarCliente(int)`, que busca la posición, desplaza los siguientes elementos y descuenta el contador para no dejar huecos. No permite eliminar un cliente que tenga pedidos registrados.
 
+### Matriz de prueba manual de pedidos (aporte Álvaro Chirino)
+
+Esta tabla resume una prueba manual del módulo de pedidos. Se probó el **camino feliz** (registrar y asignar un pedido válido) y varios **casos de error** para verificar que el sistema muestra mensajes claros sin cerrarse.
+
+| Caso | Tipo | Datos cargados (entrada) | Resultado obtenido/esperado | Qué verifica |
+| --- | --- | --- | --- | --- |
+| 1 | Camino feliz | Opción 3. Código: 9. Cliente: 1 (Ana García). Tipo: 1 (Normal). Destino: "San Martín 123". Peso: 2 kg. Distancia: 5 km. | Pedido registrado correctamente con estado `PENDIENTE`. | Alta de pedido con datos válidos y cliente existente. |
+| 2 | Camino feliz | Opción 4. Código de pedido: 9. Legajo repartidor: 2 (María Silva, moto MOTO-01). | Pedido 9 asignado a María Silva con vehículo MOTO-01. | Asignación correcta de pedido a repartidor/vehículo. |
+| 3 | Error (checked) | Opción 3. Código: 10. Cliente: 99 (no existe). Tipo: 1. Destino: "Belgrano 50". Peso: 1 kg. Distancia: 2 km. | `Error: No se encontró el cliente con código 99.` El menú sigue funcionando. | `ClienteNoEncontradoException`: no se registra pedido sin cliente válido. |
+| 4 | Error (checked) | Opción 3. Código: 10. Cliente: 1. Tipo: 1. Destino: "Rivadavia 10". Peso: -3 kg. Distancia: 4 km. | `Error: El peso debe ser mayor que cero.` (o mensaje equivalente de validación). El menú sigue funcionando. | `PedidoInvalidoException`: se rechazan datos inválidos (peso/distancia/destino/código). |
+| 5 | Error (checked) | Registrar pedido frágil nuevo (ej. código 11, cliente 2, destino "Centro", 2 kg, 3 km) y asignarlo con opción 4 al legajo 1 (Luis Gómez, bicicleta BICI-01). | `Error: Una bicicleta no puede transportar pedidos frágiles.` El menú sigue funcionando. | `CapacidadExcedidaException`/regla de negocio: un pedido frágil no puede ir en bicicleta. |
+| 6 | Error (unchecked) | Opción 5. Pedido: 4 (estado `PENDIENTE`). Nuevo estado: 2 (`ENTREGADO`). | `Error: No se puede pasar de PENDIENTE a ENTREGADO.` El menú sigue funcionando. | `EstadoInvalidoException`: solo se permiten transiciones válidas (`PENDIENTE -> EN_CAMINO -> ENTREGADO` o `PENDIENTE -> CANCELADO`). |
+
 ## Tipos de errores
 
 En el proyecto aparecieron errores de compilación, de ejecución y lógicos. Estos son ejemplos reales:
