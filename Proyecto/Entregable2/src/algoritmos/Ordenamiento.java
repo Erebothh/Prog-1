@@ -12,7 +12,10 @@ import modelo.Pedido;
 public class Ordenamiento {
 
     /**
-     * Ordenamiento burbuja.
+     * Ordena por burbuja: compara dos pedidos vecinos y los intercambia
+     * si están desordenados. En cada vuelta el mayor "burbujea" hasta el
+     * final, por eso el limite interior baja con "size - 1 - i".
+     * Peor caso O(n^2). Simple, pero lento en listas largas.
      */
     public static void burbuja(List<Pedido> lista, Comparator<Pedido> comparador) {
         for (int i = 0; i < lista.size() - 1; i++) {
@@ -25,7 +28,11 @@ public class Ordenamiento {
     }
 
     /**
-     * Ordenamiento por inserción.
+     * Ordena por inserción: toma cada pedido desde el segundo y lo
+     * "inserta" en el lugar que le corresponde dentro de la parte que
+     * ya está ordenada, corriendo los que son mayores una posición a
+     * la derecha. Peor caso O(n^2), pero si la lista ya está casi
+     * ordenada recorre muy poco.
      */
     public static void insercion(List<Pedido> lista, Comparator<Pedido> comparador) {
         for (int i = 1; i < lista.size(); i++) {
